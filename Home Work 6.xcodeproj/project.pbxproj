@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CF81F841CA4E2B1003D93C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF81F831CA4E2B1003D93C8 /* main.m */; };
+		2CF81F8C1CA4E2E5003D93C8 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF81F8B1CA4E2E5003D93C8 /* Employee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		2CF81F801CA4E2B1003D93C8 /* Home Work 6 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Home Work 6"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CF81F831CA4E2B1003D93C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CF81F8A1CA4E2E5003D93C8 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		2CF81F8B1CA4E2E5003D93C8 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +44,8 @@
 		2CF81F771CA4E2B1003D93C8 = {
 			isa = PBXGroup;
 			children = (
+				2CF81F8A1CA4E2E5003D93C8 /* Employee.h */,
+				2CF81F8B1CA4E2E5003D93C8 /* Employee.m */,
 				2CF81F821CA4E2B1003D93C8 /* Home Work 6 */,
 				2CF81F811CA4E2B1003D93C8 /* Products */,
 			);
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CF81F841CA4E2B1003D93C8 /* main.m in Sources */,
+				2CF81F8C1CA4E2E5003D93C8 /* Employee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +215,7 @@
 		2CF81F881CA4E2B1003D93C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -216,6 +223,7 @@
 		2CF81F891CA4E2B1003D93C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
