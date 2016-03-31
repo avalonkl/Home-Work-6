@@ -25,18 +25,18 @@ int main(int argc, const char * argv[]) {
 
         NSArray *namesArray[] = {@"John", @"Tim", @"Ted", @"Aaron", @"Steven"};
         NSArray *surnamesArray[] = {@"Smith", @"Dow", @"Isaacson", @"Pennyworth", @"Jenkins"};
-        NSMutableArray *employees = [[NSMutableArray alloc] init];
-        NSMutableArray *employeesWithOddSalary = [[NSMutableArray alloc]init];
+        NSMutableArray *employees = [[[NSMutableArray alloc] init]autorelease];
+        NSMutableArray *employeesWithOddSalary = [[[NSMutableArray alloc]init]autorelease];
         
         
         for(int i = 0; i<10; ++i) {
-            Employee *employeeExample = [[Employee alloc]init];
+            Employee *employeeExample = [[[Employee alloc]init]autorelease];
             employeeExample.name = namesArray[randomize(0,4)];
             employeeExample.surname = surnamesArray[randomize(0,4)];
             employeeExample.salary = randomize(1000,1000);
             [employees addObject: employeeExample];
-            [employeeExample release];
-            employeeExample = nil;
+            //[employeeExample release];
+            //employeeExample = nil;
         }
         
         saveEmployeeToFile(employees);
@@ -53,14 +53,14 @@ int main(int argc, const char * argv[]) {
         for (Employee *employeeExample in employeesWithOddSalary)
             [employees removeObject:employeeExample];
         
-        [employeesWithOddSalary release];
-        employeesWithOddSalary = nil;
+        //[employeesWithOddSalary release];
+        //employeesWithOddSalary = nil;
         
         for (Employee *employeeExample in employees)
             NSLog(@"\n%@ %@'s salary is $%u",employeeExample.name,employeeExample.surname,employeeExample.salary);
         NSLog(@"\n\n");
-        [employees release];
-        employees = nil;
+        //[employees release];
+        //employees = nil;
         
         employees = loadEmployees();
         
